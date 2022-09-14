@@ -60,7 +60,7 @@ BestHits($name,\%Hits,\%AllHits);
 print "Checking the hits\n";
 		#foreach my $key (keys %Hits){ print "$key -> $Hits{$key}\n"; }
 				### Read Organism Names
-my $names="RAST.IDs";
+my $names="GENOMES.IDs";
 my %ORGS=readNames($names);
 #my $PEG=$Hits{$name}{$ORG}[1];
 my $PEG=$Hits{$name}{$ORG}[1];
@@ -101,7 +101,7 @@ for my $orgs (sort keys %{$AllHits{$name}}){
 
 			my $peg=$sp[0];
 			my $percent=$sp[1];
-	#	print "Org ¡$org! Hit ¡$pe! percent $percent\n";
+	#	print "Org Â¡$org! Hit Â¡$pe! percent $percent\n";
 		
 			ContextArray($orgs,$peg,$ORG,$percent,\%ORGS,\%AllHits);
 		}
@@ -143,7 +143,7 @@ sub readNames{
 		$count++;
 		}
 	for my $keys (keys %query){
-		#print("¿$keys?:¡$query{$keys}!\n");
+		#print("Â¿$keys?:Â¡$query{$keys}!\n");
 		}
 	close FILE;
 	return %query;
@@ -231,7 +231,7 @@ sub getInfo{		## Read the txt
 	my $dir=$sp[6];
 	my $func=$sp[7];
 	my $amin=$sp[12];
-	print "org �$orgs! peg ¡$peg! hit $hit start $start stop $stop dir $dir func $func\n\n";	
+	print "org Â$orgs! peg Â¡$peg! hit $hit start $start stop $stop dir $dir func $func\n\n";	
 	print "Grep $Grep\n";
 	return ($hit,$start,$stop,$dir,$func,$contig,$amin);
 }
@@ -460,9 +460,9 @@ sub blastnSeq{
 	close PARSER;
 	#if (-e BLAST ){system (rm -r BLAST);}
 	#system(mkdir BLAST);
-	#print "Se corrió el blast\n";
+	#print "Se corriÃ³ el blast\n";
 	#print "\nLista $list#\n";
-	#print "Inicia búsqueda de listas de ortologos \n";
+	#print "Inicia bÃºsqueda de listas de ortologos \n";
 	}
 #_____________________________________________________________________________________
 sub blastpSeq{
@@ -494,7 +494,7 @@ sub blastpSeq{
 		}
 
 	foreach my $hit(@HITS){
-	#print "This is a hit ¡$hit!\n";
+	#print "This is a hit Â¡$hit!\n";
 	}
 
 	`blastp -db $DBname.db -query $name.query -evalue $e -num_threads 4 -out $name.parser.pre` ;
@@ -674,7 +674,7 @@ sub BlastColor{
                                                 $CLUSTERcolor{$peg}[$orgs]=[];
                                                 }
                                         push(@{$CLUSTERcolor{$peg}[$orgs]},"$color\_$percent");
-                                        #print "$color $percent -> ClusterColor ¡@{$CLUSTERcolor{$peg}[$orgs]}!\n";
+                                        #print "$color $percent -> ClusterColor Â¡@{$CLUSTERcolor{$peg}[$orgs]}!\n";
                                         #print("count #$count# color #$color#, peg #$peg#, orgs #$orgs# yo #$CLUSTERcolor{$peg}[$orgs]#\n");
                                         }
                                 }
@@ -697,7 +697,7 @@ sub setColor{
 	if (exists $CLUSTERcolor{$peg}[$orgs]){ ## Cualquier peg en cualquier organismo
 		print "Arreglo @{$CLUSTERcolor{$peg}[$orgs]}\n";
 		foreach $color_percent (@{$CLUSTERcolor{$peg}[$orgs]}){ ## Puede parecerse a distintos miembros del cluster indicados por los colores, el numero de color es el numero de gen en el cluster
-			my @sp=split("_",$color_percent); ## viene acompañado de su porcentaje
+			my @sp=split("_",$color_percent); ## viene acompaÃ±ado de su porcentaje
 			my $colorInHash=$sp[0]; 
 			my $percentInHash=$sp[1];
 			#print "$color_percent Color en hash $colorInHash PErcent in Hash $percentInHash\n";
