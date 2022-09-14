@@ -4,7 +4,7 @@
 #this script should be placed at /fungison
 #the rest should be under /fungison/bin
 #the genomes database must be in /fungison/bin/genomes
-#the RAST.Ids file must be in /fungison/bin/
+#the GENOMES.Ids file must be in /fungison/bin/
 
 use strict;
 #use warnings;
@@ -14,7 +14,7 @@ use Getopt::Long qw(GetOptions);
 print "USAGE: perl fungison.pl <OPTIONS>\n\n";
 print "OPTIONS:\n\n";
 print "-q FILE.query   	|QUERY FILE, a file with .query extension\n";
-print "-r 1234			|REFERENCE GENOME ID FROM RAST.IDs INDEX, a number\n";
+print "-r 1234			|REFERENCE GENOME ID FROM GENOMES.IDs INDEX, a number\n";
 print "-e 0.0000001		|E-VALUE CUTOFF, a number\n";
 print "-s 200	        	|BIT-SCORE CUTOFF a number\n";
 print "-d full  OR -db 1,2,3	|IDs OF THE GENOMES INCLUDED IN THE ANALYSIS, full= ENTIRE DATABASE, selected genomes separated by ',' \n";
@@ -50,14 +50,14 @@ print OUT "use lib \'\.\/\'\;\n";
 print OUT "use Cwd\;\n";
 print OUT "\$eCluster=\"0.1\"\;\n"; 		
 print OUT "\$eCore=\"0.1\"\;\n"; 		
-print OUT "\$RAST_IDs=\"RAST.IDs\"\;\n";
+print OUT "\$GENOMES_IDs=\"GENOMES.IDs\"\;\n";
 print OUT "\$BLAST_CALL=\"\"\;\n";
 print OUT "\$FORMAT_DB=\"0\"\;\n"; 
 print OUT "\$currWorkDir = &Cwd::cwd();\n";
 print OUT "\$dir=\$currWorkDir\;\n";		
 print OUT "\$NAME= pop \@\{\[split m|/|, \$currWorkDir]}\;\n";					
 print OUT "\$BLAST=\"\$NAME.blast\";\n";
-print OUT "\$NUM = `wc -l < \$RAST_IDs`;\n";
+print OUT "\$NUM = `wc -l < \$GENOMES_IDs`;\n";
 print OUT "chomp \$NUM;\n";
 print OUT "\$NUM=int(\$NUM);\n";
 #edit this to zoom in or out inthe SVG canvas
@@ -72,12 +72,12 @@ print OUT "\$RESCALE=195000;\n";
 	die "missing argument -q FILE.query [QUERY FILE, a file with .query extension]\n"; 
 	}
 	if ($reference) {
-	$refname=`awk  '(\$4==$reference){print \$3}' ./bin/RAST.IDs`;
+	$refname=`awk  '(\$4==$reference){print \$3}' ./bin/GENOMES.IDs`;
 	chomp $refname;
 	print OUT "\$SPECIAL_ORG=\"$reference\";\n";
 	}
 	else {
-	die "missing argument -r 1234 [REFERENCE GENOME ID FROM RAST.IDs INDEX, a number]\n"; 
+	die "missing argument -r 1234 [REFERENCE GENOME ID FROM GENOMES.IDs INDEX, a number]\n"; 
 	}
 	if ($evalue) {
 	print OUT "\$e=\"$evalue\"\;\n";
@@ -92,7 +92,7 @@ print OUT "\$RESCALE=195000;\n";
 	die "missing argument -s 200 [BIT-SCORE CUTOFF a number]\n";
 	}
 	if ($database=~/full/) {
-	$databasesize=`grep "." ./bin/RAST.IDs  -c`;
+	$databasesize=`grep "." ./bin/GENOMES.IDs  -c`;
 	chomp $databasesize;
 	$dbstatement="You are searching in the full database with $databasesize entries";
 	print OUT "\$LIST=\"\";\n";
