@@ -8,6 +8,7 @@ chmod +x nw_distance
 sudo apt-get install mafft
 sudo apt-get install iqtree
 sudo apt-get install blast+
+PERL SVG MODULE INSTALL GOES HERE
 
 # Folder structure
 
