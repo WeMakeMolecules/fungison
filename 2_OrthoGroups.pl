@@ -3,7 +3,7 @@
 ######################################################################
 use lib './';
 use globals2;
-#latest version modified by Pablo Cruz-Morales June 2020
+#latest version modified by Pablo Cruz-Morales sept 2022
 
 ############################################################
 sub listas;
@@ -33,7 +33,7 @@ Star($NUM2,$list);
 
 ######################################################################
 ######################################################################
-###   Sub  Rutinas (llamadas a los distintos pasos del script
+###   Sub  routines
 #######################################################################
 #######################################################################
 
@@ -65,7 +65,7 @@ sub listas{
 	}
 
 #_____________________________________________________________________________________
-sub create_list{  ########### Creates a numbers lists			
+sub create_list{  ########### Creates a  lists	of numbers		
 	
 	my $NUM=shift;
 	my $LIST=shift;
