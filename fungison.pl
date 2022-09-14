@@ -1,3 +1,11 @@
+#Created by Pablo Cruz-Morales, sept 2022
+#It writes the globals.pm file using user defined parameters
+#It delivers the results in a directory named after the -q option
+#this script should be placed at /fungison
+#the rest should be under /fungison/bin
+#the genomes database must be in /fungison/bin/genomes
+#the RAST.Ids file must be in /fungison/bin/
+
 use strict;
 #use warnings;
 use Getopt::Long qw(GetOptions);
