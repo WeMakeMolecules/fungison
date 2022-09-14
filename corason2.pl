@@ -22,11 +22,11 @@ sub cleanFiles;
 
 print "\n\n##########################################################################\n";
 print "CORASON: CORE ANALYSIS OF SYNTENIC ORTHOLOGOUS NATURAL PRODUCT BGCs\n";
-print "CORASON2 uses iqtree, no trimming, phylo sort with nw_distances\n";
-print "Smartmatch silenced, order files exist if trees fail\n";
-print "latest version modified by Pablo Cruz-Morales June 2020\n";
+print "CORASON2.1 uses iqtree, no trimming, phylo sort with nw_distances\n";
+print "Smartmatch silenced, order files exist if trees fail, aligning with mafft\n";
+print "Adapted to run with wrapper fungison.pl\n";
+print "latest version modified by Pablo Cruz-Morales september 2022\n";
 print "##########################################################################\n\n";
-print "You are using the tools: $nameFolder\n";
 print "Your working directory is $directorio\n";
 
 open (REPORTE, ">./Report.report") or die "Couldn't open report file $!";
@@ -60,7 +60,6 @@ chomp $NumClust;
 print "There are $NumClust organisms with similar clusters\n"; 
 print REPORTE "There are $NumClust organisms with similar clusters\n"; 
 print "Aligning the sequences...\n";
-#system "muscle -in QUERY_HITS.faa -out QUERY_HITS.aln";
 system "mafft QUERY_HITS.faa > QUERY_HITS.aln";
 #system "muscle -in QUERY_HITS.faa -out QUERY_HITS.aln -quiet";
 #constructing a tree with IQTREE with a 1000 bootstrap replicates
