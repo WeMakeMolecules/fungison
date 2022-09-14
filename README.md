@@ -1,2 +1,2 @@
-# fungison
-this is a clean version of corason integrated with the FUNGIT repository. Alignments work on PKSs and NRPSs and in general for long sequences
+# Fungison
+This is a clean version of CORASON integrated with the FUNGIT repository. It is tailored for fungal genomes. It wont drop large jobs on thousands of PKSs and NRPSs and in general for long sequences
