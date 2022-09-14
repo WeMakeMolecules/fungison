@@ -1,4 +1,4 @@
-###### Este script pone un identificador de organismo a cada rast id
+###### thsi script adds an idetifier to each RAST.IDs entry
 use lib './';
 use globals2;
 use experimental 'smartmatch';
