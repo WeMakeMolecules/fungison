@@ -9,10 +9,10 @@ use experimental 'smartmatch';
 sub Retrieve;
 my $pass=$ARGV[1];
 my $user=$ARGV[2];
-my $RAST_Ids=$ARGV[0];
+my $GENOME_Ids=$ARGV[0];
 ###############################################################
 ############		Main     ##############################
-Retrieve($user,$pass,$RAST_Ids);
+Retrieve($user,$pass,$GENOME_Ids);
 
 ###############################################################
 ###############################################################
