@@ -34,7 +34,7 @@ until ($counter==$TOTAL){
 `mkdir $dir2/$infile/CONCATENADOS`;
 ######## 
 sub align{
-system "system "mafft --quiet $Working_dir/FASTAINTER/$_[0].interFastatodos > $Working_dir/ALIGNMENTS/$_[0].muscle.aln -quiet";
+system "system mafft --quiet $Working_dir/FASTAINTER/$_[0].interFastatodos > $Working_dir/ALIGNMENTS/$_[0].muscle.aln";
 	$nombre="$Working_dir/ALIGNMENTS/$_[0].muscle.aln";
 	open(FILE2,$nombre)or die $!;
 	print("Se abrio el archivo $nombre\n");
