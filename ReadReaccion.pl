@@ -1,9 +1,7 @@
 use lib './';
 use warnings;
 use globals2;
-## latest version modified by Pablo Cruz-Morales June 2020
-## Leer por subsistema Replicar el trabajo de RAST
-## Leer por Fig (A quién pertenece ese fig) F
+## latest version modified by Pablo Cruz-Morales sept 2022
 ###################################################################
 ## Archivos tsv
 
@@ -44,7 +42,7 @@ sub EscribeSalida {
 	my $org=$sp[0];
 	print "Numero de cluster #$num# Organismo a buscar en txt #$org# \n";
 
-	my $ReactionFile="$dir/GENOMES/$org\.txt";  ## File cvs from RAST with ALL the reactions (From the spreadsheet reaction)
+	my $ReactionFile="$dir/GENOMES/$org\.txt";  ## File cvs from annotation tables with ALL the reactions (From the spreadsheet reaction)
 	my $genome_file="$dir/MINI/$num.faa";
 
 	my $core_file="$dir/$NAME/FASTAINTERporORG/$num.interFastatodos";
