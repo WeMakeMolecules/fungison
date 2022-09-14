@@ -60,8 +60,7 @@ chomp $NumClust;
 print "There are $NumClust organisms with similar clusters\n"; 
 print REPORTE "There are $NumClust organisms with similar clusters\n"; 
 print "Aligning the sequences...\n";
-system "mafft QUERY_HITS.faa --quiet > QUERY_HITS.aln";
-#system "muscle -in QUERY_HITS.faa -out QUERY_HITS.aln -quiet";
+system "mafft --quiet QUERY_HITS.faa  > QUERY_HITS.aln";
 #constructing a tree with IQTREE with a 1000 bootstrap replicates
 print "Creating a tree of query homologs (single marker)...\n";
 system "iqtree -s QUERY_HITS.aln -m TEST -bb 1000 -nt AUTO -quiet";
