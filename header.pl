@@ -1,4 +1,4 @@
-###### This script adds a genome identifier to each RAST id 
+###### This script adds a genome identifier to each GENOME id 
 #latest version modified by Pablo Cruz-Morales June 2020
 use lib './';
 use globals;
