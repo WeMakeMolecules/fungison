@@ -1,9 +1,9 @@
-#latest version modified by Pablo Cruz-Morales June 2020
+#latest version modified by Pablo Cruz-Morales Sept 2022
 #renames hits file
 use strict;
 use lib './';
 use experimental 'smartmatch';
-open (NAMES,"RAST.IDs") or die "Couldn't open NAMES file $!";
+open (NAMES,"GENOMES.IDs") or die "Couldn't open NAMES file $!";
 open (SEQUENCE,"QUERY_HITS.txt") or die "Couldn't open QUERY_HITS.txt file $!";
 open (OUT,">>QUERY_HITS.faa") or die "Couldn't open QUERY_HITS.faa file $!";
 my %SEQUENCES;
