@@ -2,7 +2,7 @@
 use strict;
 use lib './';
 use experimental 'smartmatch';
-open (NAMES,"RAST.IDs") or die "Couldn't open NAMES file $!";
+open (NAMES,"GENOMES.IDs") or die "Couldn't open NAMES file $!";
 open (SEQUENCE,"concatenated_matrix.txt") or die "Couldn't open Concatenados file $!";
 open (MATRIX,">>concatenated_matrix.aln") or die "Couldn't open RightNames file $!";
 
