@@ -4,7 +4,6 @@
     use globals;
 #latest version modified by Pablo Cruz-Morales June 2020
 ####################################################################
-# Need to improve: Resize window for more gene
 # Check genes are on the same contig
 # This script only transform color code given on readText on colored arrows
 ####################################################################
