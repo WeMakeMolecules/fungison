@@ -182,6 +182,7 @@ sub cleanFiles{
         `rm -r *.aln.treefile`;
         `rm -r *.aln.bionj`;
 	`rm *.parser*`;
+	`rm run.perf`
 	`rm Corebin.blast`;
 	`rm Cluster*.BLAST`;
 
