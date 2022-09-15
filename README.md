@@ -3,12 +3,14 @@ This is a clean version of CORASON integrated with the FUNGIT repository. It is 
 
 
 # Install
-
-chmod +x nw_distance
-sudo apt-get install mafft
-sudo apt-get install iqtree
-sudo apt-get install blast+
-PERL SVG MODULE INSTALL GOES HERE
+    gunzip 
+    mkdir bin
+    
+    chmod +x nw_distance
+    sudo apt-get install mafft
+    sudo apt-get install iqtree
+    sudo apt-get install blast+
+    PERL SVG MODULE INSTALL GOES HERE
 
 # Folder structure
 
