@@ -182,6 +182,7 @@ sub cleanFiles{
 	`rm *.parser*`;
 	`rm Corebin.blast`;
 	`rm Cluster*.BLAST`;
+	`rm QUERY_HITS.aln.uniqueseq.phy`;
 
         }
 #_____________________________________________________________________________________
