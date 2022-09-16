@@ -1,7 +1,7 @@
 # Fungison
 This is a clean version of CORASON integrated with the FUNGIT repository. It is tailored for fungal genomes. It wont drop large jobs on thousands of PKSs and NRPSs and in general for long sequences
 
-# Download the precompile package
+# Download the precompiled package
 	wget https://github.com/WeMakeMolecules/fungison/raw/main/FUNGISON.tar.gz
 # Decompress the file
     tar -xvf FUNGISON.tar.gz
@@ -108,3 +108,14 @@ This is a clean version of CORASON integrated with the FUNGIT repository. It is 
 	cd G3P1_results/
 	ls
 	G3P1.BLAST  G3P1.core.aln  G3P1.core.contree  G3P1.gene_context.svg  G3P1.hits.aln  G3P1.hits.contree  G3P1.report
+	
+# Cheking the  G3P1.gene_context.svg file ( you can open it in  a web browser)
+![G3P1 gene_context](https://user-images.githubusercontent.com/68575424/190658936-74af60b8-c9b1-48e0-825b-c3ab34d0966e.svg)
+
+# Cheking the  G3P1.core.contree ( you can open it in  a web browser) made with 4synthenic orthologs found in 5 genomes
+here i opened the file with figtree (http://tree.bio.ed.ac.uk/software/figtree/)
+
+![G3P1 core contree](https://user-images.githubusercontent.com/68575424/190661230-d5c70214-fdf7-4444-a3d5-10845acfb93c.jpg)
+
+
+
