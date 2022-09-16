@@ -6,8 +6,8 @@ This is a clean version of CORASON integrated with the FUNGIT repository. It is 
 # Decompress the file
     tar -xvf FUNGISON.tar.gz
 # make the nw_distance file executable
-   cd FUNGISON/bin
-   chmod +x nw_distance
+	cd FUNGISON/bin
+	chmod +x nw_distance
     
 # Install the dependencies
     sudo apt install blast+
