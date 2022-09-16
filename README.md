@@ -18,7 +18,8 @@ This is a clean version of CORASON integrated with the FUNGIT repository. It is 
         perl -MCPAN -e shell
         install SVG
 
-# Install the SVG module for perl, Method 1
+# Install the SVG module for perl, Method 2
+	sudo apt install cpanminus
         cpanm SVG
 # Loading the example dataset
     cd FUNGISON/
