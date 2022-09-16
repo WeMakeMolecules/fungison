@@ -14,13 +14,14 @@ This is a clean version of CORASON integrated with the FUNGIT repository. It is 
     sudo apt install iqtree
     sudo apt install mafft
 
-# Install the SVG module for perl, Method 1
+
+# Install the SVG module for perl, Method 2 this method is most likely to work
+	sudo apt install cpanminus
+        cpanm SVG
+# Install the SVG module for perl, Method 2 this method may not work for everyone
         perl -MCPAN -e shell
         install SVG
 
-# Install the SVG module for perl, Method 2
-	sudo apt install cpanminus
-        cpanm SVG
 # Loading the example dataset
     cd FUNGISON/
     tar -xvf EXAMPLE_DATASET.tar.gz
