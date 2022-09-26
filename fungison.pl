@@ -19,7 +19,7 @@ print "-e 0.0000001		|E-VALUE CUTOFF, [a number]\n";
 print "-s 200	        	|BIT-SCORE CUTOFF [a number]\n";
 print "-f 10			|NUMBER OF FLAKING GENES INCLUDED IN THE ANALYSIS, [a number]\n";
 print "-d full  OR -db 1,2,3	|IDs OF THE GENOMES INCLUDED IN THE ANALYSIS, ][full= entire database OR selected genomes separated by ',' ]\n";
-print "-x n or -F FORMATDB	|FORMAT THE DATABASE SELECTED WITH THE -d OPTION, ['no' is the recommeded option or 'FORMATDB']\n\n";
+print "-x no or -F FORMATDB	|FORMAT THE DATABASE SELECTED WITH THE -d OPTION, ['no' is the recommeded option or 'FORMATDB']\n\n";
 
 my $query;
 my $reference;
@@ -94,7 +94,7 @@ print OUT "\$RESCALE=195000;\n";
 	
 	}
 	else {
-	die "missing argument -x n or -x FORMATDB [FORMAT THE DATABASE SELECTED WITH THE -d OPTION, 'no' or 'FORMATDB]\n\n";
+	die "missing argument -x no or -x FORMATDB [FORMAT THE DATABASE SELECTED WITH THE -d OPTION, 'no' or 'FORMATDB]\n\n";
 	}
 
 
