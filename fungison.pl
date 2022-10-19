@@ -47,7 +47,7 @@ GetOptions(
 
 #printing the globals.pm file	
 open OUT, ">./bin/globals.pm";
-#printign defaults
+#printing defaults
 print OUT "use lib \'\.\/\'\;\n";
 print OUT "use Cwd\;\n";
 print OUT "\$eCluster=\"0.1\"\;\n"; 		
