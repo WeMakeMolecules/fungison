@@ -63,7 +63,7 @@ print "Aligning the sequences...\n";
 system "mafft --quiet QUERY_HITS.faa  > QUERY_HITS.aln";
 #constructing a tree with IQTREE with a 1000 bootstrap replicates
 print "Creating a tree of query homologs (single marker)...\n";
-system "iqtree -s QUERY_HITS.aln -m TEST -bb 1000 -nt AUTO -quiet";
+system "iqtree2 -s QUERY_HITS.aln -m TEST -bb 1000 -nt AUTO -quiet";
 system "./nw_distance -n  QUERY_HITS.aln.contree |sort -k2 -n -r|cut -f1 >QUERY_HITS.order";
 my $orderFile="QUERY_HITS.order";
 	#checking of orderfile is empty (if the tree is too small or failed)
@@ -104,7 +104,7 @@ if ($boolCore>1){
 	`perl  Rename_Ids_Star_Tree.pl`;
 	print "\nFormating matrix for BGC tree..\n";
 	print "constructing the BGC tree using IQTREE with  1000 bootstraps replicates...\n";
-	system "iqtree -s concatenated_matrix.aln -m TEST -bb 1000 -nt AUTO -quiet";
+	system "iqtree2 -s concatenated_matrix.aln -m TEST -bb 1000 -nt AUTO -quiet";
 	system "./nw_distance -n  concatenated_matrix.aln.contree |sort -k2 -n -r|cut -f1 >BGC_TREE.order";
 	$orderFile="BGC_TREE.order";
 	#checking of orderfile is empty (if the tree is too small or failed)
